@@ -3,9 +3,9 @@ from tasks.models import Project, Task
 
 class BugReport(models.Model):
     STATUS_CHOICES = [
-        ('New', 'Новая'),
+        ('New', 'Новое'),
         ('In_progress', 'В работе'),
-        ('Completed', 'Завершена'),
+        ('Completed', 'Завершено'),
     ]
     PRIORITY_CHOICES = [
         (5, '5'),
