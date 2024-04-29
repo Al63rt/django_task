@@ -1,8 +1,7 @@
 from django.contrib import admin
 from .models import BugReport, FeatureRequest
-from tasks.models import Project, Task
 
-admin.register(FeatureRequest)
+
 # Класс администратора для модели BugReport
 @admin.register(BugReport)
 class BugReportAdmin(admin.ModelAdmin):

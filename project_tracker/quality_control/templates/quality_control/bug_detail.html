@@ -7,4 +7,6 @@
     <p>Приоритет: {{ bug.priority }}</p>
     <p>Проект: {{ bug.project }}</p>
     <p>Задание: {{ bug.task }}</p>
+    <p><a href="{% url 'quality_control:update_bug_report' bug.id %}">Изменить отчет об ошибке</a></p>
+    <p><a href="{% url 'quality_control:delete_bug_report' bug.id %}"onclick="return confirm('Вы уверены, что хотите удалить этот отчет об ошибке?');">Удалить отчет об ошибке</a></p>
 {% endblock %}
