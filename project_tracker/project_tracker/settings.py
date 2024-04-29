@@ -57,7 +57,7 @@ ROOT_URLCONF = 'project_tracker.urls'
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        # Изменен список "DIRS  
+        # Изменен список "DIRS" 
         "DIRS": [os.path.join(BASE_DIR, 'templates')],
         "APP_DIRS": True,
         "OPTIONS": {

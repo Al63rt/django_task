@@ -3,9 +3,9 @@ from tasks.models import Project, Task
 
 class BugReport(models.Model):
     STATUS_CHOICES = [
-        ('New', 'Новое'),
+        ('New', 'Новый'),
         ('In_progress', 'В работе'),
-        ('Completed', 'Завершено'),
+        ('Completed', 'Завершен'),
     ]
     PRIORITY_CHOICES = [
         (5, '5'),
@@ -38,6 +38,9 @@ class BugReport(models.Model):
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.title
 
 class FeatureRequest(models.Model):
     STATUS_CHOICES = [
@@ -76,3 +79,6 @@ class FeatureRequest(models.Model):
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.title
